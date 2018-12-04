@@ -1,0 +1,554 @@
+.intro
+    overflow: hidden
+    &_list
+        position: relative
+        .flickity-page-dots
+            position: absolute
+            top: 50%
+            right: 5vw
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            transform: translateY(-50%) 
+            +r(sm)
+                flex-direction: row
+                top: 90%
+                left: 50%
+                justify-content: center
+                transform: translateX(-50%) 
+        .dot
+            display: inline-block
+            width: 15px
+            height: 15px            
+            border: 1px solid #ffffff
+            border-radius: 50%
+            margin-bottom: 15px
+            +r(sm)
+                margin-bottom: 0
+                margin-right: 10px                
+            &:last-child
+                margin-bottom: 0
+                +r(sm)
+                    margin-right: 0 
+            &:hover
+                cursor: pointer                
+            &.is-selected
+                background: #ffffff   
+                         
+
+
+        &_item
+
+.intro_item
+    position: relative
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    overflow: hidden
+    justify-content: flex-end
+    box-sizing: border-box
+    padding-bottom: 5vh
+    +r(sm)
+        padding-bottom: 20vh
+    &_bg
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%) 
+        object-fit: cover
+        z-index: -1
+    &_tittle
+        +rfs(62px)
+        font-weight: normal
+        text-align: center
+        color: #ffffff
+        margin-bottom: 15px
+        span
+            font-weight: bold
+    &_text
+        opacity: 0.9
+        +rfs(48px)
+        text-align: center
+        color: rgba(255, 255, 255, 0.9)
+        margin-bottom: 22px
+        span
+            color: rgba(100, 255, 158, 0.9)
+    &_small
+        opacity: 0.9
+        +rfs(18px)
+        text-align: center
+        color: rgba(255, 255, 255, 0.9)
+        position: relative
+        &:after,
+        &:before
+            position: absolute
+            content: ''
+            width: 28px
+            height: 1px
+            top: 50%
+            transform: translateY(-50%)
+            background-color: #0feb9e
+        &:after
+            left: 110%
+        &:before
+            right: 110%
+
+    &_social
+
+.intro_social
+    display: flex
+    align-items: center
+    margin-top: 30px
+    &_item
+        margin-right: 10px
+        &:last-child
+            margin-right: 0
+        a
+            display: block
+            img
+
+.features
+    padding: 77px 0 150px 0
+    &_body
+        &_tittle
+        &_items
+
+.features_items
+    position: relative
+    display: block
+    .flickity-viewport
+        overflow: hidden
+    .flickity-page-dots
+        position: absolute
+        display: flex
+        bottom: -50px
+        left: 50%
+        transform: translateX(-50%)
+        .dot
+            display: inline-block
+            width: 10px
+            height: 10px            
+            border: 1px solid #062033
+            border-radius: 50%
+            margin-right: 15px
+            &:last-child
+                margin-right: 0
+            &:hover
+                cursor: pointer                
+            &.is-selected
+                background-color: #062033
+    &_feat
+        width: 30%
+        margin: 0 3%
+        +r(sm)
+            width: 48%
+        +r(xs)
+            width: 100%
+
+
+.features_feat
+    position: relative
+    box-sizing: border-box
+    padding: 0 50px 
+    &_logo
+        position: absolute
+        left: 0
+        top: 0
+    &_tittle
+        +rfs(20px)
+        font-weight: 600
+        color: #062033
+        margin-bottom: 15px
+    &_text
+        opacity: 0.8
+        +rfs(13px)
+        line-height: 1.62
+        text-align: left
+        color: rgba(6, 32, 51, 0.8)
+
+.works
+    padding: 50px 0 77px 0
+    &_body
+        &_tittle
+        &_text
+        &_gallery
+
+.works_gallery
+    &_nav
+        margin-bottom: 30px
+    &_grid
+        line-height: 0
+
+.works_nav
+    display: flex
+    justify-content: center
+    align-items: center
+    +r(sm)
+        flex-wrap: wrap
+    &_button
+        border: none
+        background: none
+        +rfs(14px)
+        font-weight: bold
+        text-align: center
+        color: #062033
+        margin-right: 15px
+        &:last-child
+            margin-right: 0
+        &.is-checked
+            background-color: #0eb493
+            color: #ffffff
+            border-radius: 4px
+        +r(sm)
+            margin-right: 5px
+            margin-bottom: 10px
+
+.works_grids
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &_item
+        width: calc(100%/4)
+        +r(lg)
+            width: calc(100%/3)
+        +r(sm)
+            width: calc(100%/2)
+        +r(xxs)
+            width: 100%
+            text-align: center
+        &:hover
+            .works_hover
+                opacity: 0.8
+
+.works_grid
+    position: relative
+    &_img
+        display: inline-block
+        max-width: 100%
+        height: auto
+    &_hover
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        
+
+.works_hover
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    padding: 20px
+    background-color: #0eb493
+    opacity: 0
+    transition: all .4s     
+    &_logo
+        margin-bottom: 30px
+    &_tittle
+        margin-bottom: 10px
+        +rfs(18px)
+        font-weight: bold
+        line-height: 1.33
+        text-align: center
+        color: #ffffff
+    &_text
+        +rfs(14px)
+        line-height: 1.33
+        text-align: center
+        color: #ffffff
+
+.team
+    padding: 50px 0 150px 0
+    &_body
+        &_tittle
+        &_description
+        &_people
+
+.team_people
+    position: relative
+    display: block
+    .flickity-viewport
+        overflow: hidden
+    &_item
+        width: 22%
+        margin: 0 2%
+        +r(lg)
+            width: 30%            
+        +r(sm)
+            width: 48%
+        +r(xxs)
+            width: 100%
+    .flickity-page-dots
+        position: absolute
+        display: flex
+        bottom: -50px
+        left: 50%
+        transform: translateX(-50%)
+        .dot
+            display: inline-block
+            width: 10px
+            height: 10px            
+            border: 1px solid #062033
+            border-radius: 50%
+            margin-right: 15px
+            &:last-child
+                margin-right: 0
+            &:hover
+                cursor: pointer                
+            &.is-selected
+                background-color: #062033
+
+.team_item
+    position: relative
+    text-align: center
+    &:hover
+        .team_item_hover
+            opacity: 0.8
+    &_block
+        display: block
+        width: 100%
+        position: relative
+        margin-bottom: 15px
+        line-height: 0
+    &_img
+        display: inline-block
+        max-width: 100%
+        height: auto
+    &_hover
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        box-sizing: border-box
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        padding: 23px 
+        background-color: #0eb493
+        opacity: 0
+        transition: all .4s  
+        padding: 15px
+    &_name
+        +rfs(18px)
+        font-weight: 600
+        line-height: 1.33
+        text-align: center
+        color: #062033
+    &_position
+        +rfs(13px)
+        line-height: 1.85
+        text-align: center
+
+.team_hover
+    &_tittle
+        +rfs(16px)
+        line-height: 1.5
+        color: #ffffff
+        font-weight: bold
+        margin-bottom: 10px
+    &_info
+        +rfs(16px)
+        line-height: 1.5
+        color: #ffffff
+        margin-bottom: 10px
+    &_socials
+        width: 100%
+        display: flex
+        justify-content: center
+
+.team_socials
+    &_link       
+        margin-right: 5px
+        width: 42px
+        height: 42px
+        &:last-child
+            margin-right: 0
+        a                        
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+            height: 100%
+            background-color: rgba(0, 0, 0, 0.3)
+            img
+                display: inline-block
+
+.facts
+    width: 100%
+    padding: 150px 0
+    background: #000000 url("../img/bg_facts.jpg") 0 0 no-repeat 
+    background-size: cover
+    background-position: center
+    +r(xs)
+        padding: 150px 0 50px 0
+    &_body
+        &_tittle
+        &_item
+
+.fact_item
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    +r(xs)
+        flex-wrap: wrap
+    &_fun
+        width: 20%
+        text-align: center
+        +r(xs)
+            width: 48%
+            margin-bottom: 50px
+
+.fact_fun
+    &_img
+        display: inline-flex
+        align-items: center
+        justify-content: space-around
+        width: 130px
+        height: 130px
+        border: 1px solid #ffffff
+        border-radius: 50%
+        margin-bottom: 15px
+        +r(sm)
+            width: 100px
+            height: 100px
+        img
+    &_number
+        +rfs(60px)
+        font-weight: 600
+        text-align: center
+        color: #ffffff
+        margin-bottom: 10px
+    &_text
+        +rfs(18px)
+        text-align: center
+        color: #ffffff
+
+.discuss
+    padding: 77px 0
+    &_body
+        &_tittle
+        &_text
+        &_content
+
+.discuss_content
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    +r(sm)
+        flex-wrap: wrap
+    &_address
+    &_form           
+    &_socials
+
+.discuss_address
+    width: 245px
+    +rfs(13px)
+    font-style: normal
+    line-height: 1.45
+    color: #062033
+    margin-right: 30px
+    +r(sm)
+        order: 2
+        width: 100%
+        text-align: center
+        margin-right: 0
+    a
+        display: block
+        text-decoration: none
+        color: #6a737b
+    &_tittle
+        +rfs(22px)
+        line-height: 1.35
+        text-align: left
+        color: #6a737b
+        margin-bottom: 10px
+        +r(sm)
+            text-align: center
+
+.discuss_form
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    +r(sm)
+        order: 0 
+        width: 100%
+        margin-bottom: 40px
+    &_tittle
+        +rfs(24px)
+        font-weight: bold
+        line-height: 1
+        text-align: left
+        color: #062033  
+        +r(sm)
+            text-align: center
+            margin-bottom: 30px     
+    &_input
+        +rfs(13px)
+        font-weight: normal
+        line-height: 1.85
+        text-align: left
+        color: rgba(91, 100, 110, 0.5) 
+        border: none
+        border-bottom: 1px solid #6a737b
+        margin-bottom: 15px
+        +r(xxs)
+            width: 100%
+            text-align: center
+            padding: 10px 15px
+    &_btn
+        +rfs(16px)
+        line-height: 1.5
+        text-align: left
+        color: #000000
+        margin-left: auto
+        background: none
+        border: none
+        display: inline-flex
+        align-items: center
+        +r(xxs)        
+            margin: 20px auto 0 auto
+        img
+            display: inline-block
+            margin-right: 10px
+
+.discuss_socials
+    margin-left: 30px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    +r(sm)
+       order: 1
+       width: 100%
+       flex-direction: row
+       justify-content: center
+       margin-bottom: 40px
+       margin-left: 0
+    &_link
+        margin-bottom: 5px
+        +r(sm)
+            margin-bottom: 0
+            margin-right: 20px
+        &:last-child
+            margin-bottom: 0
+            +r(sm)
+                margin-right: 0
+        a
+            display: block
+
+
+
+
+
+
+
+
+
+

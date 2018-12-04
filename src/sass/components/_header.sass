@@ -1,0 +1,124 @@
+.header
+    position: absolute
+    width: 100%
+    left: 0
+    top: 0
+    padding: 25px 0
+    z-index: 100
+    &_body
+        display: flex
+        align-items: center
+        +r(sm)
+            flex-wrap: wrap
+        &_logo
+            .logo
+                display: block
+                img
+        &_search
+            margin-right: auto
+            margin-left: 27px
+            position: relative
+            &:after
+                position: absolute
+                content: ''
+                height: 100%
+                width: 1px
+                left: 0
+                top: 0
+                background-color: #555555
+            .search
+                background: none
+                border: none
+                padding: 5px 15px
+                +rfs(16px) 
+                color: #555555
+                transition: all .4s
+                border: 1px solid rgba(255, 255, 255, 0)
+        &_nav
+            +r(sm)
+                width: 100%
+                max-height: 0
+                overflow: hidden
+                transition: all .4s
+
+.header_nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +r(sm)
+        flex-direction: column
+        height: 80vh
+        padding: 10vh 0
+    &_item
+        a
+            +rfs(13px)
+            letter-spacing: 0.7px
+            font-weight: 700
+            color: #333333
+            text-decoration: none
+            padding: 5px 10px
+            +r(sm)
+                color: #0eb493
+                +rfs(40px)
+
+.header-burger
+    position: relative
+    background: none
+    border: none
+    display: none
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    width: 30px
+    height: 18px
+    transition: all .4s
+    //Это Mixin (см. в файле _mixins.sass)
+    +r(sm)                                    
+        display: flex
+    &__line
+        display: inline-block
+        width: 30px
+        height: 2px
+        background-color: #7D7D7D
+        border-radius: 3px
+        transition: all .4s
+
+.mask
+    display: inline-block    
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #fff
+    z-index: 1
+    transition: all .5s
+    opacity: 0
+    transform: translateY(-100%)
+    &.is-active
+        opacity: 0.93
+        transform: translateY(0%)
+        transition: all .2s
+
+// is-active menu
+.header_body.is-active
+    .header_body_search
+        input
+            +r(sm)
+                color: #0eb493
+                border: 1px solid #0eb493
+                border-radius: 3px
+    .header-burger
+        &__line
+            background-color: #0eb493
+            &:nth-of-type(1)
+                transform: rotate(45deg) translateY(10px) 
+            &:nth-of-type(2)
+                background-color: #fff
+            &:nth-of-type(3)
+                transform: rotate(-45deg) translateY(-10px) 
+    .header_body_nav
+        +r(sm)
+            max-height: 110vh 
+
+
